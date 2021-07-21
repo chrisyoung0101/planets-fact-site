@@ -24,9 +24,75 @@ body {
 }
 
 .container {
-  margin: 1em 0.5em;
+  margin: 0.5em 0.5em 1em 0.5em;
   /* ??? */
   height: calc(100% 2em);
+}
+
+.header {
+  height: 2.5em;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 0;
+  padding: 0;
+}
+
+.menu-btn {
+  margin-top: 0.7em;
+  width: 1.5em;
+  height: 1.0625em;
+  cursor: pointer;
+}
+
+nav ul {
+  margin-top: 0;
+  /* list is to the right.  bring it left. not sure why it went right.  this is my hack */
+  /* margin-left: -2em; */
+  top: 3em;
+  left: 0;
+  width: 100%;
+  background-color: var(--black);
+  height: 100vh;
+  position: fixed;
+  list-style-type: none;
+}
+
+nav ul a {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul a {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  text-decoration: none;
+  /* margin: 0; */
+}
+
+.dot {
+  content: '';
+  margin: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.menu-text {
+  display: inline;
+}
+
+.chevron {
+  display: inline-block;
+  margin: 0 1.5em 0 0;
+  width: 0.25em;
+  height: 0.5em;
+  cursor: pointer;
 }
 
 h1 {
