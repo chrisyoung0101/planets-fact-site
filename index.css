@@ -1,3 +1,6 @@
+/* font-family: 'Antonio', sans-serif; */
+/* font-family: 'Spartan', sans-serif; */
+
 *,
 *:before,
 *:after {
@@ -34,12 +37,21 @@ body {
 hr {
   margin-left: -2em;
   margin-right: -2em;
+  margin-top: 0;
+  color: rgba(131, 131, 145, 0.4);
+}
+
+.hr2 {
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: -0.35em;
   color: rgba(131, 131, 145, 0.4);
 }
 
 .header {
   height: 2.8em;
   display: flex;
+  margin-bottom: 0.5em;
   justify-content: space-between;
 }
 
@@ -165,26 +177,47 @@ ul:last-child li:last-child a {
 .buttons {
   display: flex;
   justify-content: space-between;
-  background: none;
+  margin-top: -0.3em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  margin-bottom: -0.1em;
 }
 
+/* rename button? */
 .ghost-button {
-  /* display: inline-block; */
-  /* width: 200px; */
-  padding: 8px;
   color: var(--white);
-  border: none;
-  /* text-align: center; */
-  outline: none;
+  border: 4px solid rgba(0, 0, 0, 0);
+  display: inline-block;
+  margin: 1.25em 0 0 0;
+  font-size: 0.5625rem;
+  font-family: spartan;
+  font-weight: 700;
+  letter-spacing: 1.92857px;
+  text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0);
-  text-decoration: none;
-  margin: 0.5em;
   opacity: 0.5;
 }
 
-.ghost-button:hover {
-  border-bottom: 3px solid blue;
+.ghost-button:after {
+  display: block;
+  content: '';
+  padding: 0.75em;
   margin: 0;
+  border-bottom: solid 3px var(--skyblue);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.ghost-button:hover:after {
+  transform: scaleX(1);
+}
+
+.ghost-button:hover {
+  opacity: 1;
+}
+
+.planet-img {
+  width: 6.9375em;
 }
 
 h1 {
@@ -214,5 +247,11 @@ p {
   text-align: center;
 }
 
-/* font-family: 'Antonio', sans-serif; */
-/* font-family: 'Spartan', sans-serif; */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content .flex-item {
+  align-self: center;
+}
