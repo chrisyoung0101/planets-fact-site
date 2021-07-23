@@ -22,7 +22,7 @@ body {
   height: 100vh;
   background-attachment: fixed;
   /* remove scroll bar for mobile */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
@@ -46,6 +46,11 @@ hr {
 .logo {
   margin-top: 0;
   padding: 0;
+}
+
+/* hide the menu */
+.menu {
+  display: none;
 }
 
 .menu-btn {
@@ -153,6 +158,33 @@ ul:last-child li:last-child a {
   width: 0.4em;
   height: 0.58em;
   cursor: pointer;
+}
+
+/* buttons */
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  background: none;
+}
+
+.ghost-button {
+  /* display: inline-block; */
+  /* width: 200px; */
+  padding: 8px;
+  color: var(--white);
+  border: none;
+  /* text-align: center; */
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  margin: 0.5em;
+  opacity: 0.5;
+}
+
+.ghost-button:hover {
+  border-bottom: 3px solid blue;
+  margin: 0;
 }
 
 h1 {
