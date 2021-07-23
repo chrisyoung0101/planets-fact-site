@@ -21,6 +21,8 @@ body {
   background: #070724 url('./assets/background-stars.svg');
   height: 100vh;
   background-attachment: fixed;
+  /* remove scroll bar for mobile */
+  overflow: hidden;
 }
 
 .container {
@@ -29,9 +31,14 @@ body {
   height: calc(100% 2em);
 }
 
+hr {
+  margin-left: -2em;
+  margin-right: -2em;
+  color: rgba(131, 131, 145, 0.4);
+}
+
 .header {
-  height: 2.5em;
-  margin: 0;
+  height: 2.8em;
   display: flex;
   justify-content: space-between;
 }
@@ -46,6 +53,11 @@ body {
   width: 1.5em;
   height: 1.0625em;
   cursor: pointer;
+  opacity: 24.87%;
+}
+
+.link {
+  margin-right: 1.7em;
 }
 
 nav ul {
@@ -53,7 +65,7 @@ nav ul {
   margin-top: 0;
   /* list is to the right.  bring it left. not sure why it went right.  this is my hack */
   /* margin-left: -2em; */
-  top: 3em;
+  top: 4.5em;
   left: 0;
   width: 100%;
   background-color: var(--black);
@@ -62,18 +74,18 @@ nav ul {
   list-style-type: none;
 }
 
+.menu ul:first-child {
+  padding-top: 1.5em;
+}
+
 nav ul a {
-  margin-right: 0.2em;
+  margin: 0.3em 0 0.3em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4.0625em;
-  border-bottom: 1px solid var(--lightgrey);
-}
-
-nav ul a {
-  /* margin: 0;
-  padding: 0; */
+  /* lasr param of rgba is opacity */
+  border-bottom: 1px solid rgba(131, 131, 145, 0.4);
   color: var(--white);
   text-decoration: none;
   font-family: 'Spartan', sans-serif;
@@ -82,6 +94,10 @@ nav ul a {
   letter-spacing: 1.36364px;
   /* line-height: 25px; */
   text-transform: uppercase;
+}
+
+ul:last-child li:last-child a {
+  border-bottom: none;
 }
 
 .link-text {
@@ -98,9 +114,33 @@ nav ul a {
   margin: 0;
   height: 20px;
   width: 20px;
-  background-color: var(--white);
   border-radius: 50%;
   display: inline-block;
+}
+
+.dot-mercury {
+  background-color: var(--white);
+}
+.dot-venus {
+  background-color: #f7cc7f;
+}
+.dot-earth {
+  background-color: #545bfe;
+}
+.dot-mars {
+  background-color: #ff6a45;
+}
+.dot-jupiter {
+  background-color: #ecad7a;
+}
+.dot-saturn {
+  background-color: #fccb6b;
+}
+.dot-uranus {
+  background-color: #65f0d5;
+}
+.dot-neptune {
+  background-color: #497efa;
 }
 
 .menu-text {
@@ -109,7 +149,7 @@ nav ul a {
 
 .chevron {
   display: inline-block;
-  margin: 0 1.5em 0 0;
+  /* margin: 0 1.5em 0 0; */
   width: 0.4em;
   height: 0.58em;
   cursor: pointer;
