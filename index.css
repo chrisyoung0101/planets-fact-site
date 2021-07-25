@@ -24,7 +24,7 @@ body {
   background: #070724 url('./assets/background-stars.svg');
   height: 100vh;
   background-attachment: fixed;
-  /* remove scroll bar for mobile */
+  /* stop scroll & remove scroll bar for mobile */
   /* overflow: hidden; */
 }
 
@@ -34,11 +34,20 @@ body {
   height: calc(100% 2em);
 }
 
-hr {
+/* hr {
   margin-left: -2em;
   margin-right: -2em;
   margin-top: 0;
   color: rgba(131, 131, 145, 0.4);
+  color: yellowgreen;
+} */
+
+.hr1 {
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: -0.35em;
+  color: rgba(131, 131, 145, 0.4);
+  z-index: 999;
 }
 
 .hr2 {
@@ -46,6 +55,7 @@ hr {
   margin-right: -2em;
   margin-top: -0.35em;
   color: rgba(131, 131, 145, 0.4);
+  /* z-index: 999; */
 }
 
 .header {
@@ -61,9 +71,9 @@ hr {
 }
 
 /* hide the menu */
-.menu {
+/* .menu {
   display: none;
-}
+} */
 
 .menu-btn {
   margin-top: 0.7em;
@@ -79,7 +89,7 @@ hr {
 
 nav ul {
   margin-left: -0.5em;
-  margin-top: 0;
+  margin-top: -1.5em;
   /* list is to the right.  bring it left. not sure why it went right.  this is my hack */
   /* margin-left: -2em; */
   top: 4.5em;
@@ -89,11 +99,21 @@ nav ul {
   height: 100vh;
   position: fixed;
   list-style-type: none;
+  transform: translateX(100%);
+  transition: transform 0.3s;
 }
 
 .menu ul:first-child {
-  padding-top: 1.5em;
+  margin-top: 0.5em;
+  padding-top: 1em;
+  border-top: 1px solid rgba(131, 131, 145, 0.4);
 }
+
+/* display: block; allows padding styling on a <a> */
+/* nav ul li a {
+  display: block;
+  padding: 1em;
+} */
 
 nav ul a {
   margin: 0.3em 0 0.3em 0;
@@ -101,7 +121,7 @@ nav ul a {
   justify-content: space-between;
   align-items: center;
   height: 4.0625em;
-  /* lasr param of rgba is opacity */
+  /* last param of rgba is opacity */
   border-bottom: 1px solid rgba(131, 131, 145, 0.4);
   color: var(--white);
   text-decoration: none;
@@ -247,11 +267,89 @@ p {
   text-align: center;
 }
 
+/* section.content */
+
 .content {
+  /* display: none; */
   display: flex;
   flex-direction: column;
 }
 
 .content .flex-item {
   align-self: center;
+}
+
+.planet-img {
+  margin-top: 5.5375em;
+  margin-bottom: 5em;
+}
+
+.content h1 {
+  margin: 0 0 0.2em 0;
+}
+
+.content p {
+  margin-bottom: 2.5em;
+}
+
+/* removes the underline from the link text  */
+.source {
+  text-decoration: none;
+  margin-bottom: 0.75em;
+}
+
+/* kept  */
+.source-text {
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: spartan;
+  opacity: 0.5;
+}
+
+.wikipedia {
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: spartan;
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.infotangle:last-child {
+  margin-bottom: 2.5em;
+}
+
+.infotangle-container-flex {
+  margin-top: 1.25em;
+  margin-bottom: -0.6em;
+  margin-left: -0.75em;
+  margin-right: -0.75em;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ffffff55;
+  text-transform: uppercase;
+  height: 3.25em;
+}
+
+.infotangle-title {
+  margin-left: 2.25em;
+  margin-top: 2.25em;
+  color: var(--white);
+  font-size: 0.55rem;
+  font-weight: 700;
+  font-family: spartan;
+  letter-spacing: 0.727273px;
+  opacity: 0.5;
+}
+
+/* made it a span because styles were not being applied with a <p>  Global Style??? */
+.infotangle-content {
+  margin-top: 0.5em;
+  margin-right: 1.5em;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: Antonio;
+  /* letter-spacing: 0.75px; */
 }
