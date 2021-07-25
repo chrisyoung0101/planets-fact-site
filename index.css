@@ -88,6 +88,7 @@ body {
 }
 
 nav ul {
+  display: block;
   margin-left: -0.5em;
   margin-top: -1.5em;
   /* list is to the right.  bring it left. not sure why it went right.  this is my hack */
