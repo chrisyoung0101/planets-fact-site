@@ -42,11 +42,13 @@ body {
   color: yellowgreen;
 } */
 
+/* TODO : .hr1 & .hr2 are the same.  Consolidate. */
 .hr1 {
   margin-left: -2em;
   margin-right: -2em;
   margin-top: -0.35em;
-  color: rgba(131, 131, 145, 0.4);
+  border-top: 1px solid rgba(131, 131, 145, 0.4);
+  border-bottom: none;
   z-index: 999;
 }
 
@@ -54,8 +56,9 @@ body {
   margin-left: -2em;
   margin-right: -2em;
   margin-top: -0.35em;
-  color: rgba(131, 131, 145, 0.4);
-  /* z-index: 999; */
+  border-top: 1px solid rgba(131, 131, 145, 0.4);
+  border-bottom: none;
+  z-index: 999;
 }
 
 .header {
@@ -80,7 +83,7 @@ body {
   width: 1.5em;
   height: 1.0625em;
   cursor: pointer;
-  opacity: 24.87%;
+  opacity: 1;
 }
 
 .link {
@@ -105,16 +108,12 @@ nav ul {
 }
 
 .menu ul:first-child {
-  margin-top: 0.5em;
+  margin-top: -0.5em;
   padding-top: 1em;
   border-top: 1px solid rgba(131, 131, 145, 0.4);
 }
 
-/* display: block; allows padding styling on a <a> */
-/* nav ul li a {
-  display: block;
-  padding: 1em;
-} */
+/* menu */
 
 nav ul a {
   margin: 0.3em 0 0.3em 0;
@@ -353,4 +352,10 @@ p {
   font-weight: 400;
   font-family: Antonio;
   /* letter-spacing: 0.75px; */
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
 }

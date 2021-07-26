@@ -1,8 +1,11 @@
 // menu-btn
 
+// Code for hiding / showing the menu however we really don't need this functionality
 const menuBtn = document.querySelector('.menu-btn');
 const menuBtnShow = document.querySelector('.show');
 const menu = document.querySelector('nav ul');
+const sectionContent = document.querySelector('.content');
+const body = document.querySelector('body');
 
 menuBtn.addEventListener('click', () => {
   // getting the matrix value of translateX to toggle the menu
@@ -23,7 +26,14 @@ menuBtn.addEventListener('click', () => {
 
   if (x > 0) {
     menu.style.transform = 'translateX(0)';
+    menuBtn.style.opacity = '24.87%';
+    sectionContent.style.display = 'none';
+    body.style.overflow = 'hidden';
   } else {
     menu.style.transform = 'translateX(100%)';
+    menuBtn.style.opacity = 1;
+    sectionContent.style.display = 'flex';
+    // only add scroll bar when necessary
+    body.style.overflow = 'auto';
   }
 });
