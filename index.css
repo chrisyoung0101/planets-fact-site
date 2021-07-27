@@ -270,13 +270,26 @@ p {
 /* section.content */
 
 .content {
-  /* display: none; */
   display: flex;
   flex-direction: column;
 }
 
 .content .flex-item {
   align-self: center;
+}
+
+.flex-content {
+  display: flex;
+}
+
+.flex-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-btns {
+  display: none;
 }
 
 .planet-img {
@@ -355,7 +368,86 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .btns-mobile {
+    display: none;
+  }
+
+  .hr1 {
+    display: none;
+  }
+
+  .hr2 {
+    margin-top: 3.2em;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  .chevron {
+    display: none;
+  }
+
+  .menu ul:first-child {
+    /* margin-top: -0.5em; */
+    /* padding-top: 1em; */
+    border-top: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(0);
+    height: 2em;
+  }
+
+  nav ul li {
+    margin-top: -1.5em;
+  }
+
+  nav ul li a {
+    border: none;
+  }
+
+  .link-text {
+    margin: 0;
+    font-size: 0.6875rem;
+    letter-spacing: 1px;
+  }
+
+  .side-btns {
+    display: flex;
+    flex-direction: column;
+  }
+
   .menu-btn {
     display: none;
+  }
+
+  .flex-content {
+    justify-content: space-between;
+  }
+
+  .flex-content-item {
+    /* give both flex-content-items the same size */
+    flex-basis: 100%;
+  }
+
+  p.flex-text-item {
+    text-align: left;
+  }
+
+  .flex-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
