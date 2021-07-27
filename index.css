@@ -428,8 +428,50 @@ p {
     flex-direction: column;
   }
 
+  .side-btn-1,
+  .side-btn-2,
+  .side-btn-3 {
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    font-size: 0.5625rem;
+    font-family: spartan;
+    font-weight: 700;
+    letter-spacing: 1.92857px;
+    text-transform: uppercase;
+    /* background-color: rgba(0, 0, 0, 0); */
+    opacity: 1;
+    width: 281px;
+    padding-top: 2em;
+    /* padding-right: 15em; */
+    /* padding-left: -20em; */
+    text-align: start;
+  }
+
+  .side-btn-1::before {
+    content: '01';
+    margin: 1em;
+    opacity: 0.5;
+  }
+
+  .side-btn-2::before {
+    content: '02';
+    margin: 1em;
+    opacity: 0.5;
+  }
+
+  .side-btn-3::before {
+    content: '03';
+    margin: 1em;
+    opacity: 0.5;
+  }
+
   .menu-btn {
     display: none;
+  }
+
+  .xtra-txt {
+    padding-right: 0.6em;
   }
 
   .flex-content {
