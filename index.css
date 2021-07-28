@@ -374,6 +374,17 @@ p {
 
   .header {
     justify-content: center;
+    margin-top: 1.5em;
+  }
+
+  .planet-img {
+    margin-top: 10em;
+    margin-bottom: 10em;
+    width: 11.5em;
+  }
+
+  .source {
+    margin-top: 0.75em;
   }
 
   .btns-mobile {
@@ -385,7 +396,7 @@ p {
   }
 
   .hr2 {
-    margin-top: 3.2em;
+    margin-top: 3.75em;
   }
 
   .dot {
@@ -410,7 +421,7 @@ p {
   }
 
   nav ul li {
-    margin-top: -1.5em;
+    margin-top: -0.55em;
   }
 
   nav ul li a {
@@ -426,6 +437,9 @@ p {
   .side-btns {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: -1.2em;
   }
 
   .side-btn-1,
@@ -442,10 +456,22 @@ p {
     /* background-color: rgba(0, 0, 0, 0); */
     opacity: 1;
     width: 281px;
-    padding-top: 2em;
-    /* padding-right: 15em; */
-    /* padding-left: -20em; */
+    height: 4.5em;
+    padding-top: 1.65em;
     text-align: start;
+    margin: 0.55em;
+  }
+
+  .side-btn-1:hover {
+    background-color: var(--skyblue);
+  }
+
+  .side-btn-2:hover {
+    background-color: var(--skyblue);
+  }
+
+  .side-btn-3:hover {
+    background-color: var(--skyblue);
   }
 
   .side-btn-1::before {
@@ -470,6 +496,10 @@ p {
     display: none;
   }
 
+  .ghost-button:hover:after {
+    transform: scaleX(0);
+  }
+
   .xtra-txt {
     padding-right: 0.6em;
   }
@@ -491,5 +521,31 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .infotangle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .infotangle-container-flex {
+    height: 5.5em;
+    width: 10.25em;
+  }
+
+  /* make the infotangle content into a flex column */
+  .infotangle-container-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infotangle-title {
+    margin-left: 1.75em;
+  }
+
+  .infotangle-content {
+    margin-left: 0.75em;
+    margin-bottom: 1em;
   }
 }
