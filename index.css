@@ -552,7 +552,7 @@ p {
 }
 
 /* desktop */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   /* bring back the scroll */
   body {
     overflow: visible;
@@ -617,6 +617,14 @@ p {
     right: 150px;
   }
 
+  /* .flex-content-wrapper {
+    display: flex;
+  } */
+
+  /* .flex-content-wrapper-item {
+    justify-content: space-between;
+  } */
+
   .source {
     margin-top: -0.75em;
   }
@@ -624,12 +632,6 @@ p {
   .buttons {
     margin-top: 0.25em;
     margin-left: -0.25em;
-  }
-
-  .flex-content-item {
-    /* give both flex-content-items the same size */
-    flex-basis: 0;
-    /* align-items: flex-end; */
   }
 
   .content h1 {
@@ -646,9 +648,23 @@ p {
     justify-content: space-around;
   }
 
-  /* stopped here - styling the size of these guys */
-
   .infotangle-container-flex {
+    position: relative;
     width: 255px;
+    height: 128px;
+  }
+
+  .infotangle-title {
+    position: absolute;
+    font-size: 0.6875em;
+    top: 0px;
+    left: 7px;
+  }
+
+  .infotangle-content {
+    position: absolute;
+    font-size: 2.5rem;
+    top: 35px;
+    left: -5px;
   }
 }
