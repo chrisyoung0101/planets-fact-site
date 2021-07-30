@@ -563,48 +563,92 @@ p {
   }
 
   .header {
-    height: 2.8em;
+    height: 3.38em;
     display: flex;
     margin: 0;
     justify-content: space-between;
     width: 10em;
   }
 
-  /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
-
-  /* .menu {
-    width: 10em;
-  } */
-
-  /* stopped here - playing with postioning the nav links and the log in the header */
-
-  nav ul {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-around;
-    transform: translateY(0);
-    margin-left: 50em;
-    padding-top: 0;
-    padding-right: 20px;
-    height: 1em;
-    width: 40em;
+  .hr2 {
+    margin-top: 0;
   }
 
-  nav ul li {
-    margin-top: -0.55em;
+  .planet-img {
+    position: absolute;
+    /* margin-top: 10em;
+    margin-bottom: 10em; */
+    width: 18.125em;
+    left: 335px;
+  }
+
+  /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
+
+  nav ul {
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: flex-end;
+    transform: translateX(40px);
+    padding: 0;
+    margin: 0;
+    z-index: -1;
   }
 
   nav ul li a {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
     border: none;
   }
 
-  .flex-header-desktop {
-    display: flex;
+  .menu ul:first-child {
+    padding-top: 0;
+    margin-top: 0;
   }
 
-  .flex-header-desktop-item {
-    justify-content: flex-start;
+  /* section content */
+  .flex-content {
+    flex-direction: column;
+    width: min-content;
+    position: absolute;
+    margin-right: 5.2em;
+    top: 200px;
+    right: 150px;
+  }
+
+  .source {
+    margin-top: -0.75em;
+  }
+
+  .buttons {
+    margin-top: 0.25em;
+    margin-left: -0.25em;
+  }
+
+  .flex-content-item {
+    /* give both flex-content-items the same size */
+    flex-basis: 0;
+    /* align-items: flex-end; */
+  }
+
+  .content h1 {
+    font-size: 5rem;
+  }
+
+  .infotangle {
+    position: absolute;
+    /* why does bottom not work? */
+    /* bottom: 0px; */
+    top: 700px;
+    margin-left: 5em;
+    width: 90%;
+    justify-content: space-around;
+  }
+
+  /* stopped here - styling the size of these guys */
+
+  .infotangle-container-flex {
+    width: 255px;
   }
 }
