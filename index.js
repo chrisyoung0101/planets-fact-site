@@ -32,7 +32,7 @@ menuBtn.addEventListener('click', () => {
     menuBtn.style.opacity = '24.87%';
     sectionContent.style.display = 'none';
     //stop scroll mobile - what about tablet & desktop?
-    body.style.overflow = 'none';
+    body.style.overflow = 'hidden';
     infotangle.style.display = 'none';
   } else {
     menu.style.transform = 'translateX(100%)';
