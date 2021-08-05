@@ -6,6 +6,7 @@ const menuBtnShow = document.querySelector('.show');
 const menu = document.querySelector('nav ul');
 const sectionContent = document.querySelector('.content');
 const body = document.querySelector('body');
+const infotangle = document.querySelector('.infotangle');
 
 menuBtn.addEventListener('click', () => {
   // getting the matrix value of translateX to toggle the menu
@@ -18,6 +19,8 @@ menuBtn.addEventListener('click', () => {
   //split up the matrix into an array?
   const matrixValues = matrix.match(/matrix.*\((.+)\)/)[1].split(', ');
 
+  console.log(matrixValues.length);
+
   //   4 = translateX value
   //   5 = translateY value
   const x = matrixValues[4];
@@ -29,11 +32,13 @@ menuBtn.addEventListener('click', () => {
     menuBtn.style.opacity = '24.87%';
     sectionContent.style.display = 'none';
     body.style.overflow = 'hidden';
+    infotangle.style.display = 'none';
   } else {
     menu.style.transform = 'translateX(100%)';
     menuBtn.style.opacity = 1;
     sectionContent.style.display = 'flex';
     // only add scroll bar when necessary
     body.style.overflow = 'auto';
+    infotangle.style.display = 'block';
   }
 });

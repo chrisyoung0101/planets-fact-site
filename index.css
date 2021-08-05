@@ -551,6 +551,22 @@ p {
   }
 }
 
+/* this should go with content stuff */
+
+/* TD this has affected mobile & desktop now.  */
+
+.flex-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.planet-img.flex-content-wrapper-item {
+  /* background-color: red; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* desktop */
 @media only screen and (min-width: 1024px) {
   /* bring back the scroll */
@@ -579,7 +595,17 @@ p {
     /* margin-top: 10em;
     margin-bottom: 10em; */
     width: 18.125em;
-    left: 335px;
+    left: 150px;
+  }
+
+  /* section content */
+  .flex-content {
+    flex-direction: column;
+    width: min-content;
+    position: absolute;
+    margin-right: 5.2em;
+    top: 200px;
+    right: 75px;
   }
 
   /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
@@ -607,23 +633,14 @@ p {
     margin-top: 0;
   }
 
-  /* section content */
-  .flex-content {
-    flex-direction: column;
-    width: min-content;
-    position: absolute;
-    margin-right: 5.2em;
-    top: 200px;
-    right: 150px;
+  .flex-content-wrapper {
+    display: flex;
+    background-color: #1ec2a4;
   }
 
-  /* .flex-content-wrapper {
-    display: flex;
-  } */
-
-  /* .flex-content-wrapper-item {
-    justify-content: space-between;
-  } */
+  .flex-content-wrapper-item {
+    justify-content: center;
+  }
 
   .source {
     margin-top: -0.75em;
@@ -648,6 +665,42 @@ p {
     justify-content: space-around;
   }
 
+  .infotangle-container-flex {
+    margin-top: 1.25em;
+    margin-bottom: -0.6em;
+    margin-left: -0.75em;
+    margin-right: -0.75em;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ffffff55;
+    text-transform: uppercase;
+    height: 5.25em;
+  }
+
+  .infotangle-title {
+    margin-left: 1.75em;
+    margin-top: 2.25em;
+    color: var(--white);
+    font-size: 0.55rem;
+    font-weight: 700;
+    font-family: spartan;
+    letter-spacing: 0.727273px;
+    opacity: 0.5;
+  }
+
+  /* made it a span because styles were not being applied with a <p>  Global Style??? */
+  .infotangle-content {
+    margin-top: 0.5em;
+    margin-right: 1.5em;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: Antonio;
+    /* letter-spacing: 0.75px; */
+  }
+}
+
+@media only screen and (min-width: 1336px) {
   .infotangle-container-flex {
     position: relative;
     width: 255px;
