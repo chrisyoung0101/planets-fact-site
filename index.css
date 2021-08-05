@@ -25,7 +25,7 @@ body {
   height: 100vh;
   background-attachment: fixed;
   /* stop scroll & remove scroll bar for mobile */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .container {
@@ -367,8 +367,31 @@ p {
   /* letter-spacing: 0.75px; */
 }
 
+/* this should go with content stuff */
+
+/* TD this has affected mobile & desktop now.  */
+
+.flex-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.planet-img.flex-content-wrapper-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
+/* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
+/* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
+/* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
+/* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
+/* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
+
 /* tablet */
 @media only screen and (min-width: 768px) {
+  /* remove scroll */
   body {
     overflow: hidden;
   }
@@ -419,6 +442,7 @@ p {
     justify-content: space-around;
     transform: translateY(0);
     height: 2em;
+    /* overflow: scroll; */
   }
 
   nav ul li {
@@ -551,21 +575,12 @@ p {
   }
 }
 
-/* this should go with content stuff */
-
-/* TD this has affected mobile & desktop now.  */
-
-.flex-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.planet-img.flex-content-wrapper-item {
-  /* background-color: red; */
-  margin-left: auto;
-  margin-right: auto;
-}
+/* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
+/* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
+/* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
+/* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
+/* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
+/* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
 
 /* desktop */
 @media only screen and (min-width: 1024px) {
@@ -633,13 +648,9 @@ p {
     margin-top: 0;
   }
 
+  /* remove smaller screen styles */
   .flex-content-wrapper {
-    display: flex;
-    background-color: #1ec2a4;
-  }
-
-  .flex-content-wrapper-item {
-    justify-content: center;
+    all: unset;
   }
 
   .source {
