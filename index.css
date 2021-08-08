@@ -53,6 +53,7 @@ body {
 }
 
 .hr2 {
+  /* background-color: red; */
   margin-left: -2em;
   margin-right: -2em;
   margin-top: -0.35em;
@@ -134,9 +135,9 @@ nav a {
   text-transform: uppercase;
 }
 
-ul:last-child li:last-child a {
+/* ul:last-child li:last-child a {
   border-bottom: none;
-}
+} */
 
 .link-text {
   margin-top: 0.25em;
@@ -394,7 +395,8 @@ p {
 @media only screen and (min-width: 768px) {
   /* remove scroll */
   body {
-    overflow: hidden;
+    /* overflow: hidden; */
+    margin: 1.5em;
   }
 
   .header {
@@ -454,18 +456,10 @@ p {
     border: none;
   } */
 
-  nav ul li a {
-    background-color: #1ec2a4;
-    /* position: absolute;
-    top: -1em; */
-    /* height: 3em; */
-    border: solid 5px blue;
-  }
-
   li {
     all: initial;
     display: inline-block;
-    background-color: red;
+    /* background-color: red; */
   }
 
   a.link {
@@ -611,6 +605,20 @@ p {
     margin-left: 0.75em;
     margin-bottom: 1em;
   }
+
+  div.flex-content {
+    /* background-color: blue; */
+    flex-direction: row;
+  }
+
+  div.flex-text.flex-content-item {
+    /* background-color: red; */
+    margin-right: 5.2em;
+  }
+  div.flex-content-item {
+    /* background-color: green; */
+    width: 20em;
+  }
 }
 
 /* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
@@ -621,9 +629,7 @@ p {
 /* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
 
 /* desktop */
-@media only screen and (min-width: 1024px) {
-  a.link, li:after, li:hover:after, li:hover 
-
+@media only screen and (min-width: 1440px) {
   /* bring back the scroll */
   body {
     overflow: visible;
@@ -642,7 +648,15 @@ p {
   }
 
   .hr2 {
-    margin-top: 0;
+    margin-top: -0.65em;
+    margin-right: -5em;
+    margin-left: -5em;
+  }
+
+  .logo {
+    /* background-color: red; */
+    margin-top: -0.25em;
+    /* margin-bottom: -1em; */
   }
 
   .planet-img {
@@ -650,90 +664,80 @@ p {
     /* margin-top: 10em;
     margin-bottom: 10em; */
     width: 18.125em;
-    left: 150px;
+    left: 300px;
   }
 
   /* section content */
-  .flex-content {
+  div.flex-content {
+    display: flex;
+    /* background-color: red; */
     flex-direction: column;
-    width: min-content;
+    width: fit-content;
     position: absolute;
     margin-right: 5.2em;
     top: 200px;
-    right: 75px;
+    right: -20px;
+  }
+
+  div.flex-text.flex-content-item {
+    /* background-color: red; */
+    margin: 0;
+  }
+
+  .side-btn-1,
+  .side-btn-2,
+  .side-btn-3 {
+    /* background-color: orange; */
+    width: 100%;
   }
 
   /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
 
-  nav ul {
-    display: flex;
-    position: absolute;
-    top: 0;
-    justify-content: flex-end;
-    /* transform: translateX(40px); */
-    /* padding: 0; */
-    /* margin-top: 1em; */
-    z-index: -1;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 1em;
-    /* all: initial; */
-    /* display: inline-block;
-    position: relative;
-    z-index: 1;
-    padding: 2em; */
-    /* margin: -2em; */
-    /* background-color: #c21e3c; */
-    width: fit-content;
-    height: unset;
-    /* margin-top: 1em; */
-    /* padding-top: 1em; */
-    border: none;
-    cursor: pointer;
-    /* justify-content: end; */
-  }
-
-  /* .menu ul:first-child {
-    padding-top: 0;
-    margin-top: 0;
-    padding-left: 1em;
+  /* nav,
+  nav ul,
+  nav li,
+  a.link {
+    all: initial;
   } */
 
-  nav ul {
+  .menu ul:first-child {
     all: initial;
-    /* background-color: red; */
-    list-style-type: none;
-    display: flex;
-    /* background-color: blueviolet; */
-    justify-content: flex-end;
+  }
+
+  nav {
     position: absolute;
-    top: -35px;
+    top: -15px;
     right: 0;
   }
 
-  nav a:before {
-    all: initial;
+  a.link {
+    /* margin: 0em 1em 1em 1em; */
+    margin: 0.25em 1em 1em 1em;
+    border-bottom: none;
+  }
+
+  li:after {
+    display: none;
+  }
+
+  li:before {
     display: block;
     content: '';
-    height: 1.5em;
-    border-top: solid 3px var(--skyblue);
+    position: relative;
+    margin: 0;
+    border-bottom: solid 3px var(--skyblue);
+    /* border-top: solid 3px orange; */
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
 
-  nav a:hover:before {
+  li:hover:before {
     transform: scaleX(1);
   }
 
-  nav a:hover {
+  li:hover {
     opacity: 1;
   }
-
-  /* nav li {
-    background-color: #838391;
-  } */
 
   /* remove smaller screen styles */
   .flex-content-wrapper {
