@@ -95,7 +95,7 @@ function clickHandler(event) {
   }
 }
 
-// ************* MOBILE **************
+// ************* TABLE & DESKTOP **************
 
 const sideBtn1 = document.querySelector('.side-btn-1');
 const sideBtn2 = document.querySelector('.side-btn-2');

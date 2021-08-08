@@ -853,9 +853,7 @@ p {
     font-family: Antonio;
     /* letter-spacing: 0.75px; */
   }
-}
 
-/* @media only screen and (min-width: 1336px) {
   .infotangle-container-flex {
     position: relative;
     width: 255px;
@@ -875,4 +873,4 @@ p {
     top: 35px;
     left: -5px;
   }
-} */
+}
