@@ -18,6 +18,8 @@
   --red: #d83a34;
   --burntorange: #cd5120;
   --teal: #1ec2a4;
+  --bgc: red;
+  --transvalue: scaleX(1);
 }
 
 body {
@@ -91,6 +93,10 @@ body {
 .link {
   margin-right: 1.7em;
 }
+
+/* button.overview:focus {
+  background-color: red;
+} */
 
 /* menu nav */
 
@@ -234,9 +240,25 @@ nav a {
   transform: scaleX(1);
 }
 
+/* .ghost-button:default:after {
+  transform: scaleX(1);
+} */
+
+/* .ghost-button:hover:after {
+  transform: scaleX(1);
+} */
+
 .ghost-button:hover {
   opacity: 1;
 }
+
+.myelement:after {
+  transform: var(--transvalue);
+}
+
+/* .ghost-button:focus:after {
+  transform: scaleX(1);
+} */
 
 .planet-img {
   width: 6.9375em;
@@ -519,15 +541,22 @@ p {
     margin: 0.55em;
   }
 
-  .side-btn-1:hover {
-    background-color: var(--skyblue);
-  }
-
-  .side-btn-2:hover {
-    background-color: var(--skyblue);
-  }
-
+  .side-btn-1:hover,
+  .side-btn-2:hover,
   .side-btn-3:hover {
+    background-color: rgba(131, 131, 145, 0.4);
+  }
+
+  .myBackGroundColor {
+    background-color: var(--skyblue);
+  }
+
+  .mySelectedBackGroundColor {
+    background-color: rgba(131, 131, 145, 0.4);
+  }
+
+  .side-btn-2:focus,
+  .side-btn-3:focus {
     background-color: var(--skyblue);
   }
 
@@ -690,6 +719,7 @@ p {
     /* background-color: orange; */
     width: 100%;
   }
+
   .side-btn-1:hover,
   .side-btn-2:hover,
   .side-btn-3:hover {
@@ -697,7 +727,18 @@ p {
     border: black;
   }
 
-  .side-btn-1:focus,
+  /* .side-btn-1 {
+    background-color: var(--skyblue);
+  } */
+
+  .myBackGroundColor {
+    background-color: var(--skyblue);
+  }
+
+  .mySelectedBackGroundColor {
+    background-color: rgba(131, 131, 145, 0.4);
+  }
+
   .side-btn-2:focus,
   .side-btn-3:focus {
     background-color: var(--skyblue);
