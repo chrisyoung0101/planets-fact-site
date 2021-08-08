@@ -690,6 +690,18 @@ p {
     /* background-color: orange; */
     width: 100%;
   }
+  .side-btn-1:hover,
+  .side-btn-2:hover,
+  .side-btn-3:hover {
+    background-color: rgba(131, 131, 145, 0.4);
+    border: black;
+  }
+
+  .side-btn-1:focus,
+  .side-btn-2:focus,
+  .side-btn-3:focus {
+    background-color: var(--skyblue);
+  }
 
   /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
 
@@ -802,7 +814,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 1336px) {
+/* @media only screen and (min-width: 1336px) {
   .infotangle-container-flex {
     position: relative;
     width: 255px;
@@ -822,4 +834,4 @@ p {
     top: 35px;
     left: -5px;
   }
-}
+} */
