@@ -135,26 +135,44 @@ sideBtn3.addEventListener('click', (clickedSide) => {
   }
 });
 
-//SHOW - HIDE CONTENT
+//SHOW - HIDE CONTENT : show image, show text, show link
 
+//tablet and desktop "side" buttons
 const sideBtnOverview = document.querySelector('.side-btn-1');
 const sideBtnStructure = document.querySelector('.side-btn-2');
 const sideBtnGeology = document.querySelector('.side-btn-3');
 
-const overviewContent = document.querySelector('.overview-btn');
-const structureContent = document.querySelector('.structure-btn');
-const geologyContent = document.querySelector('.geology-btn');
+//content text
+const overviewContent = document.querySelector('.overview-text');
+const structureContent = document.querySelector('.structure-text');
+const geologyContent = document.querySelector('.geology-text');
 
+//content img
 const overviewImg = document.querySelector('.overview-img');
 const structureImg = document.querySelector('.structure-img');
 const geologyImg = document.querySelector('.geology-img');
 
+//content wikipedia link
+const overviewLink = document.querySelector('.overview-link');
+const structureLink = document.querySelector('.structure-link');
+const geologyLink = document.querySelector('.geology-link');
+
+// overview content
 sideBtnOverview.addEventListener('click', () => {
+  overviewImg.style.display = 'inline-block';
+  structureImg.style.display = 'none';
+  geologyImg.style.display = 'none';
+
   overviewContent.style.display = 'block';
   structureContent.style.display = 'none';
   geologyContent.style.display = 'none';
+
+  overviewLink.style.display = 'inline';
+  structureLink.style.display = 'none';
+  geologyLink.style.display = 'none';
 });
 
+//structure content
 sideBtnStructure.addEventListener('click', () => {
   overviewImg.style.display = 'none';
   structureImg.style.display = 'inline-block';
@@ -163,8 +181,13 @@ sideBtnStructure.addEventListener('click', () => {
   overviewContent.style.display = 'none';
   structureContent.style.display = 'block';
   geologyContent.style.display = 'none';
+
+  overviewLink.style.display = 'none';
+  structureLink.style.display = 'inline';
+  geologyLink.style.display = 'none';
 });
 
+//geology content
 sideBtnGeology.addEventListener('click', () => {
   overviewImg.style.display = 'inline-block';
   structureImg.style.display = 'none';
@@ -173,4 +196,8 @@ sideBtnGeology.addEventListener('click', () => {
   overviewContent.style.display = 'none';
   structureContent.style.display = 'none';
   geologyContent.style.display = 'block';
+
+  overviewLink.style.display = 'none';
+  structureLink.style.display = 'none';
+  geologyLink.style.display = 'inline';
 });

@@ -38,13 +38,13 @@ img.planet-img.geology-img {
 } */
 
 .planet-img {
-  background-color: red;
   margin-top: 5.5375em;
   margin-bottom: 5em;
   width: 6.9375em;
 }
 
 .geology-img {
+  display: none;
   width: 10.19em;
   height: 12.43em;
 }
@@ -58,14 +58,14 @@ img.planet-img.geology-img {
 } */
 
 /* show - hide content text */
-.structure-btn,
-.geology-btn {
+.structure-text,
+.geology-text {
   display: none;
 }
 
 /* show - hide link type */
-a.structure,
-a.geology {
+.structure-link,
+.geology-link {
   display: none;
 }
 
@@ -468,9 +468,15 @@ p {
     margin-top: 1.5em;
   }
 
+  /* give p enough room to not jump with new text */
+  p.flex-text-item {
+    height: 10em;
+  }
+
   /* tablet - overlap geology image over planet image */
   .geology-img.flex-content-wrapper-item {
     margin-top: -12.6em;
+    margin-bottom: 4.3em;
     width: 110px;
     height: 134.29px;
   }
@@ -737,7 +743,7 @@ p {
     /* margin-bottom: -1em; */
   }
 
-  /* tablet - overlap geology image over planet image */
+  /* desktop - overlap geology image over planet image */
   .geology-img.flex-content-wrapper-item {
     position: absolute;
     top: 700px;
