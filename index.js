@@ -134,3 +134,43 @@ sideBtn3.addEventListener('click', (clickedSide) => {
     sideBtn3.classList.add('myBackGroundColor');
   }
 });
+
+//SHOW - HIDE CONTENT
+
+const sideBtnOverview = document.querySelector('.side-btn-1');
+const sideBtnStructure = document.querySelector('.side-btn-2');
+const sideBtnGeology = document.querySelector('.side-btn-3');
+
+const overviewContent = document.querySelector('.overview-btn');
+const structureContent = document.querySelector('.structure-btn');
+const geologyContent = document.querySelector('.geology-btn');
+
+const overviewImg = document.querySelector('.overview-img');
+const structureImg = document.querySelector('.structure-img');
+const geologyImg = document.querySelector('.geology-img');
+
+sideBtnOverview.addEventListener('click', () => {
+  overviewContent.style.display = 'block';
+  structureContent.style.display = 'none';
+  geologyContent.style.display = 'none';
+});
+
+sideBtnStructure.addEventListener('click', () => {
+  overviewImg.style.display = 'none';
+  structureImg.style.display = 'inline-block';
+  geologyImg.style.display = 'none';
+
+  overviewContent.style.display = 'none';
+  structureContent.style.display = 'block';
+  geologyContent.style.display = 'none';
+});
+
+sideBtnGeology.addEventListener('click', () => {
+  overviewImg.style.display = 'inline-block';
+  structureImg.style.display = 'none';
+  geologyImg.style.display = 'inline-block';
+
+  overviewContent.style.display = 'none';
+  structureContent.style.display = 'none';
+  geologyContent.style.display = 'block';
+});

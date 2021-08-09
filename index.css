@@ -30,6 +30,39 @@ body {
   /* overflow: hidden; */
 }
 
+/* show - hide images */
+/* img.planet-img.structure-img,
+img.planet-img.geology-img {
+  display: none;
+} */
+.structure-img {
+  display: none;
+}
+
+/* stopped here trying to size this img */
+/* why will width not work? */
+.geology-img {
+  position: absolute;
+  background-color: red;
+  width: 16px;
+}
+
+/* .overview-btn {
+  background-color: red;
+} */
+
+/* show - hide content text */
+.structure-btn,
+.geology-btn {
+  display: none;
+}
+
+/* show - hide link type */
+a.structure,
+a.geology {
+  display: none;
+}
+
 .container {
   margin: 1em 1.5em 1em 1.5em;
   /* ??? */
