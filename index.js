@@ -137,6 +137,14 @@ sideBtn3.addEventListener('click', (clickedSide) => {
 
 //SHOW - HIDE CONTENT : show image, show text, show link
 
+//mobile buttons
+
+const mobileBtnOverview = document.querySelector('.overview-mobile-btn');
+const mobileBtnStructure = document.querySelector('.structure-mobile-btn');
+const mobileBtnGeology = document.querySelector('.geology-mobile-btn');
+
+// mobileBtnOverview.style.background = 'red';
+
 //tablet and desktop "side" buttons
 const sideBtnOverview = document.querySelector('.side-btn-1');
 const sideBtnStructure = document.querySelector('.side-btn-2');
@@ -156,6 +164,55 @@ const geologyImg = document.querySelector('.geology-img');
 const overviewLink = document.querySelector('.overview-link');
 const structureLink = document.querySelector('.structure-link');
 const geologyLink = document.querySelector('.geology-link');
+
+// MOBILE
+
+// overview content
+mobileBtnOverview.addEventListener('click', () => {
+  overviewImg.style.display = 'inline-block';
+  structureImg.style.display = 'none';
+  geologyImg.style.display = 'none';
+
+  overviewContent.style.display = 'block';
+  structureContent.style.display = 'none';
+  geologyContent.style.display = 'none';
+
+  overviewLink.style.display = 'inline';
+  structureLink.style.display = 'none';
+  geologyLink.style.display = 'none';
+});
+
+//structure content
+mobileBtnStructure.addEventListener('click', () => {
+  overviewImg.style.display = 'none';
+  structureImg.style.display = 'inline-block';
+  geologyImg.style.display = 'none';
+
+  overviewContent.style.display = 'none';
+  structureContent.style.display = 'block';
+  geologyContent.style.display = 'none';
+
+  overviewLink.style.display = 'none';
+  structureLink.style.display = 'inline';
+  geologyLink.style.display = 'none';
+});
+
+//geology content
+mobileBtnGeology.addEventListener('click', () => {
+  overviewImg.style.display = 'inline-block';
+  structureImg.style.display = 'none';
+  geologyImg.style.display = 'inline-block';
+
+  overviewContent.style.display = 'none';
+  structureContent.style.display = 'none';
+  geologyContent.style.display = 'block';
+
+  overviewLink.style.display = 'none';
+  structureLink.style.display = 'none';
+  geologyLink.style.display = 'inline';
+});
+
+// TABLET & DESKTOP
 
 // overview content
 sideBtnOverview.addEventListener('click', () => {

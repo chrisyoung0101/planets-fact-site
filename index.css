@@ -30,6 +30,11 @@ body {
   /* overflow: hidden; */
 }
 
+/* give p enough room to not jump with new text */
+p.flex-text-item {
+  height: 10em;
+}
+
 /* IMAGES */
 /* show - hide images */
 /* img.planet-img.structure-img,
@@ -47,6 +52,7 @@ img.planet-img.geology-img {
   display: none;
   width: 10.19em;
   height: 12.43em;
+  margin-bottom: 1.95em;
 }
 
 .structure-img {
