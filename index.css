@@ -30,21 +30,27 @@ body {
   /* overflow: hidden; */
 }
 
+/* IMAGES */
 /* show - hide images */
 /* img.planet-img.structure-img,
 img.planet-img.geology-img {
   display: none;
 } */
-.structure-img {
-  display: none;
+
+.planet-img {
+  background-color: red;
+  margin-top: 5.5375em;
+  margin-bottom: 5em;
+  width: 6.9375em;
 }
 
-/* stopped here trying to size this img */
-/* why will width not work? */
 .geology-img {
-  position: absolute;
-  background-color: red;
-  width: 16px;
+  width: 10.19em;
+  height: 12.43em;
+}
+
+.structure-img {
+  display: none;
 }
 
 /* .overview-btn {
@@ -293,9 +299,9 @@ nav a {
   transform: scaleX(1);
 } */
 
-.planet-img {
+/* .planet-img {
   width: 6.9375em;
-}
+} */
 
 h1 {
   color: var(--white);
@@ -347,11 +353,6 @@ p {
 
 .side-btns {
   display: none;
-}
-
-.planet-img {
-  margin-top: 5.5375em;
-  margin-bottom: 5em;
 }
 
 .content h1 {
@@ -434,9 +435,17 @@ p {
   justify-content: center;
 }
 
-.planet-img.flex-content-wrapper-item {
+.planet-img.flex-content-wrapper-item,
+.geology-img.flex-content-wrapper-item {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* mobile - overlap geology image over planet image */
+.geology-img.flex-content-wrapper-item {
+  margin-top: -6.6em;
+  width: 60px;
+  height: 73.25px;
 }
 
 /* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
@@ -457,6 +466,13 @@ p {
   .header {
     justify-content: center;
     margin-top: 1.5em;
+  }
+
+  /* tablet - overlap geology image over planet image */
+  .geology-img.flex-content-wrapper-item {
+    margin-top: -12.6em;
+    width: 110px;
+    height: 134.29px;
   }
 
   .planet-img {
@@ -719,6 +735,17 @@ p {
     /* background-color: red; */
     margin-top: -0.25em;
     /* margin-bottom: -1em; */
+  }
+
+  /* tablet - overlap geology image over planet image */
+  .geology-img.flex-content-wrapper-item {
+    position: absolute;
+    top: 700px;
+    left: 365px;
+    /* background-color: blue; */
+    margin-top: -16.5em;
+    width: 163px;
+    height: 199px;
   }
 
   .planet-img {
