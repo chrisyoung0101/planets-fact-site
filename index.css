@@ -19,6 +19,13 @@
   --burntorange: #cd5120;
   --teal: #1ec2a4;
   --bgc: red;
+  --earth: #6d2ed5;
+  --mars: #d14c32;
+  --jupiter: #d83a34;
+  --saturn: #cd5120;
+  --uranus: #1ec1a2;
+  --neptune: #2d68f0;
+
   --transvalue: scaleX(1);
 }
 
@@ -864,6 +871,35 @@ p {
     opacity: 1;
   }
 
+  /* note : using id as class selector not working - specificity issue?  */
+  #venus-link:before {
+    border-bottom: solid 3px var(--orange);
+  }
+
+  #earth-link:before {
+    border-bottom: solid 3px var(--earth);
+  }
+
+  #mars-link:before {
+    border-bottom: solid 3px var(--mars);
+  }
+
+  #jupiter-link:before {
+    border-bottom: solid 3px var(--jupiter);
+  }
+
+  #saturn-link:before {
+    border-bottom: solid 3px var(--saturn);
+  }
+
+  #uranus-link:before {
+    border-bottom: solid 3px var(--uranus);
+  }
+
+  #neptune-link:before {
+    border-bottom: solid 3px var(--neptune);
+  }
+
   /* remove smaller screen styles */
   .flex-content-wrapper {
     all: unset;
@@ -918,7 +954,7 @@ p {
   /* made it a span because styles were not being applied with a <p>  Global Style??? */
   .infotangle-content {
     margin-top: 0.5em;
-    margin-right: 1.5em;
+    margin-right: 1em;
     color: var(--white);
     font-size: 1.25rem;
     font-weight: 400;
