@@ -97,41 +97,81 @@ function clickHandler(event) {
 
 // ************* TABLE & DESKTOP **************
 
-const sideBtn1 = document.querySelector('.side-btn-1');
-const sideBtn2 = document.querySelector('.side-btn-2');
-const sideBtn3 = document.querySelector('.side-btn-3');
+const sideBtn1Mercury = document.querySelector('.overview .side-btn-1-mercury');
+const sideBtn2Mercury = document.querySelector('.overview.side-btn-2-mercury');
+const sideBtn3Mercury = document.querySelector('.overview.side-btn-3-mercury');
+
+const sideBtn1Earth = document.querySelector('.side-btn-1-earth');
+const sideBtn2Earth = document.querySelector('.side-btn-2-earth');
+const sideBtn3Earth = document.querySelector('.side-btn-3-earth');
 
 //default
-sideBtn1.classList.add('myBackGroundColor');
+sideBtn1Mercury.classList.add('mercuryBackGroundColor');
+//sideBtn1Earth.classList.add('earthBackGroundColor');
 
-sideBtn1.classList.remove('side-btn-1:hover');
+sideBtn1Mercury.classList.remove('side-btn-1-mercury:hover');
+//sideBtn1Earth.classList.remove('side-btn-1-earth:hover');
+
+// sideBtn1Earth.classList.remove('side-btn-1-earth');
+//sideBtn1Earth.style.background = 'red';
 
 const clickedSide = false;
 
-sideBtn1.addEventListener('click', (clickedSide) => {
+// mercury
+
+sideBtn1Mercury.addEventListener('click', (clickedSide) => {
   clickedSide = true;
   if (clickedSide) {
-    sideBtn1.classList.add('myBackGroundColor');
-    sideBtn2.classList.remove('myBackGroundColor');
-    sideBtn3.classList.remove('myBackGroundColor');
+    sideBtn1Mercury.classList.add('mercuryBackGroundColor');
+    sideBtn2Mercury.classList.remove('mercuryBackGroundColor');
+    sideBtn3Mercury.classList.remove('mercuryBackGroundColor');
   }
 });
 
-sideBtn2.addEventListener('click', (clickedSide) => {
+sideBtn2Mercury.addEventListener('click', (clickedSide) => {
   clickedSide = true;
   if (clickedSide) {
-    sideBtn1.classList.remove('myBackGroundColor');
-    sideBtn2.classList.add('myBackGroundColor');
-    sideBtn3.classList.remove('myBackGroundColor');
+    sideBtn1Mercury.classList.remove('mercuryBackGroundColor');
+    sideBtn2Mercury.classList.add('mercuryBackGroundColor');
+    sideBtn3Mercury.classList.remove('mercuryBackGroundColor');
   }
 });
 
-sideBtn3.addEventListener('click', (clickedSide) => {
+sideBtn3Mercury.addEventListener('click', (clickedSide) => {
   clickedSide = true;
   if (clickedSide) {
-    sideBtn1.classList.remove('myBackGroundColor');
-    sideBtn2.classList.remove('myBackGroundColor');
-    sideBtn3.classList.add('myBackGroundColor');
+    sideBtn1Mercury.classList.remove('mercuryBackGroundColor');
+    sideBtn2Mercury.classList.remove('mercuryBackGroundColor');
+    sideBtn3Mercury.classList.add('mercuryBackGroundColor');
+  }
+});
+
+// earth
+
+sideBtn1Earth.addEventListener('click', (clickedSide) => {
+  clickedSide = true;
+  if (clickedSide) {
+    sideBtn1Earth.classList.add('earthBackGroundColor');
+    sideBtn2Earth.classList.remove('earthBackGroundColor');
+    sideBtn3Earth.classList.remove('earthBackGroundColor');
+  }
+});
+
+sideBtn2Earth.addEventListener('click', (clickedSide) => {
+  clickedSide = true;
+  if (clickedSide) {
+    sideBtn1Earth.classList.remove('earthBackGroundColor');
+    sideBtn2Earth.classList.add('earthBackGroundColor');
+    sideBtn3Earth.classList.remove('earthBackGroundColor');
+  }
+});
+
+sideBtn3Earth.addEventListener('click', (clickedSide) => {
+  clickedSide = true;
+  if (clickedSide) {
+    sideBtn1Earth.classList.remove('earthBackGroundColor');
+    sideBtn2Earth.classList.remove('earthBackGroundColor');
+    sideBtn3Earth.classList.add('earthBackGroundColor');
   }
 });
 
