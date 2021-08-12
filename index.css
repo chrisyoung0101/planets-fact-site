@@ -615,11 +615,11 @@ p {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
-  .mercuryBackGroundColor {
+  .myBackGroundColor {
     background-color: var(--skyblue);
   }
 
-  .mercurySelectedBackGroundColor {
+  .mySelectedBackGroundColor {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
@@ -795,56 +795,38 @@ p {
   .side-btn-1,
   .side-btn-2,
   .side-btn-3 {
-    /* background-color: orange; */
     width: 100%;
   }
 
-  /* button color when hovered */
-  .side-btn-1:hover,
+  /* ******************************************************** */
+  /* start button color change desktop */
+
+  /* change this to another class */
+  /* #hover-mercury:hover, */
   .side-btn-2:hover,
   .side-btn-3:hover {
     background-color: rgba(131, 131, 145, 0.4);
     border: black;
   }
 
-  /* .side-btn-1 {
-    background-color: var(--skyblue);
-  } */
-
-  /* Need this? */
-  .mercurySelectedBackGroundColor {
+  /* need this? */
+  .mySelectedBackGroundColor {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
-  .side-btn-1-earth {
-    background-color: var(--earth);
-  }
-
   /* button color when selected */
-  .mercuryBackGroundColor {
+  .myBackGroundColor {
     background-color: var(--skyblue);
   }
 
-  .earthBackGroundColor {
-    background-color: var(--earth);
-  }
-
   /* button color when focused */
-  .side-btn-2-mercury:focus,
-  .side-btn-3-mercury:focus {
+  .side-btn-2:focus,
+  .side-btn-3:focus {
     background-color: var(--skyblue);
   }
 
-  /* button color when selected */
-  /* .earthBackGroundColor {
-    background-color: var(--earth);
-  } */
-
-  /* button color when focused */
-  .side-btn-2-earth:focus,
-  .side-btn-3-earth:focus {
-    background-color: var(--earth);
-  }
+  /* side btn color change stop */
+  /* ******************************************************** */
 
   /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
 
