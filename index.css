@@ -615,16 +615,28 @@ p {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
-  .myBackGroundColor {
+  /* .myBackGroundColor {
     background-color: var(--skyblue);
+  } */
+
+  .mercury-color {
+    background-color: var(--skyblue);
+  }
+
+  /* .myBackGroundColorVenus {
+    background-color: var(--orange);
+  } */
+
+  .venus-color {
+    background-color: var(--orange);
   }
 
   .mySelectedBackGroundColor {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
-  .side-btn-2:focus,
-  .side-btn-3:focus {
+  .mercury-color.side-btn-2:focus,
+  .mercury-color.side-btn-3:focus {
     background-color: var(--skyblue);
   }
 

@@ -97,43 +97,121 @@ function clickHandler(event) {
 
 // ************* TABLE & DESKTOP **************
 
-const sideBtn1 = document.querySelector('.side-btn-1');
-const sideBtn2 = document.querySelector('.side-btn-2');
-const sideBtn3 = document.querySelector('.side-btn-3');
+function mercuryLoad() {
+  console.log('mercury loaded');
+  const sideBtn1Mercury = document.querySelector('.side-btn-1.mercury-color');
+  const sideBtn2Mercury = document.querySelector('.side-btn-2.mercury-color');
+  const sideBtn3Mercury = document.querySelector('.side-btn-3.mercury-color');
 
-//default
-sideBtn1.classList.add('myBackGroundColor');
+  //disable hover - note : this disables js events on this element.  click events
+  //will actually fall through to the next element (whatever that means).
+  // sideBtn1.style.pointerEvents = 'none';
 
-sideBtn1.classList.remove('side-btn-1:hover');
+  //thoughts :
+  //if btn with unique class is clicked change the background color accordingly
 
-const clickedSide = false;
+  //default
+  sideBtn1Mercury.style.pointerEvents = 'none';
+  sideBtn1Mercury.classList.add('mercury-color');
+  sideBtn2Mercury.classList.remove('mercury-color');
+  sideBtn3Mercury.classList.remove('mercury-color');
 
-sideBtn1.addEventListener('click', (clickedSide) => {
-  clickedSide = true;
-  if (clickedSide) {
-    sideBtn1.classList.add('myBackGroundColor');
-    sideBtn2.classList.remove('myBackGroundColor');
-    sideBtn3.classList.remove('myBackGroundColor');
-  }
-});
+  const clickedSideMercury = false;
 
-sideBtn2.addEventListener('click', (clickedSide) => {
-  clickedSide = true;
-  if (clickedSide) {
-    sideBtn1.classList.remove('myBackGroundColor');
-    sideBtn2.classList.add('myBackGroundColor');
-    sideBtn3.classList.remove('myBackGroundColor');
-  }
-});
+  sideBtn1Mercury.addEventListener('click', (clickedSideMercury) => {
+    console.log('hi mercury');
+    clickedSideMercury = true;
+    if (clickedSideMercury) {
+      sideBtn1Mercury.classList.add('mercury-color');
+      sideBtn1Mercury.style.pointerEvents = 'none';
+      sideBtn2Mercury.classList.remove('mercury-color');
+      sideBtn3Mercury.classList.remove('mercury-color');
+    }
+  });
 
-sideBtn3.addEventListener('click', (clickedSide) => {
-  clickedSide = true;
-  if (clickedSide) {
-    sideBtn1.classList.remove('myBackGroundColor');
-    sideBtn2.classList.remove('myBackGroundColor');
-    sideBtn3.classList.add('myBackGroundColor');
-  }
-});
+  sideBtn2Mercury.addEventListener('click', (clickedSideMercury) => {
+    clickedSideMercury = true;
+    if (clickedSideMercury) {
+      sideBtn1Mercury.classList.remove('mercury-color');
+      sideBtn1Mercury.style.pointerEvents = 'initial';
+      sideBtn2Mercury.classList.add('mercury-color');
+      sideBtn3Mercury.classList.remove('mercury-color');
+    }
+  });
+
+  sideBtn3Mercury.addEventListener('click', (clickedSideMercury) => {
+    clickedSideMercury = true;
+    if (clickedSideMercury) {
+      sideBtn1Mercury.classList.remove('mercury-color');
+      sideBtn1Mercury.style.pointerEvents = 'initial';
+      sideBtn2Mercury.classList.remove('mercury-color');
+      sideBtn3Mercury.classList.add('mercury-color');
+    }
+  });
+}
+
+// VENUS COlOR FOR SIDE BTNS
+
+function venusLoad() {
+  console.log('venus loaded');
+
+  const sideBtn1Venus = document.querySelector('.side-btn-1.venus-color');
+  const sideBtn2Venus = document.querySelector('.side-btn-2.venus-color');
+  const sideBtn3Venus = document.querySelector('.side-btn-3.venus-color');
+  //default
+  sideBtn1Venus.style.pointerEvents = 'none';
+  sideBtn1Venus.classList.add('venus-color');
+  sideBtn2Venus.classList.remove('venus-color');
+  sideBtn3Venus.classList.remove('venus-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Venus.addEventListener('onmousedown', () => {
+    console.log('this is venus btn 3');
+    sideBtn3Venus.style.backgroundColor = 'red';
+    sideBtn3Venus.blur();
+  });
+  const clickedSideVenus = false;
+
+  sideBtn1Venus.addEventListener('click', (clickedSideVenus) => {
+    //console.log('hi mercury');
+    clickedSideVenus = true;
+    if (clickedSideVenus) {
+      sideBtn1Venus.classList.add('venus-color');
+      sideBtn1Venus.style.pointerEvents = 'none';
+      sideBtn2Venus.classList.remove('venus-color');
+      sideBtn2Venus.style.pointerEvents = 'initial';
+      sideBtn3Venus.classList.add('venus-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Venus.classList.remove('venus-color');
+      sideBtn2Venus.blur();
+    }
+  });
+
+  sideBtn2Venus.addEventListener('click', (clickedSideVenus) => {
+    clickedSideVenus = true;
+    if (clickedSideVenus) {
+      sideBtn1Venus.classList.remove('venus-color');
+      sideBtn1Venus.style.pointerEvents = 'initial';
+      sideBtn2Venus.style.pointerEvents = 'none';
+      sideBtn2Venus.blur();
+      sideBtn2Venus.classList.add('venus-color');
+      sideBtn3Venus.classList.remove('venus-color');
+      sideBtn3Venus.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Venus.addEventListener('click', (clickedSideVenus) => {
+    clickedSideVenus = true;
+    if (clickedSideVenus) {
+      sideBtn1Venus.classList.remove('venus-color');
+      sideBtn3Venus.style.pointerEvents = 'none';
+      sideBtn2Venus.classList.remove('venus-color');
+      sideBtn2Venus.style.pointerEvents = 'initial';
+      sideBtn3Venus.classList.add('venus-color');
+      sideBtn3Venus.blur();
+    }
+  });
+}
 
 //SHOW - HIDE CONTENT : show image, show text, show link
 
