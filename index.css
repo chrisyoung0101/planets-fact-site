@@ -635,9 +635,15 @@ p {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
+<<<<<<< HEAD
   .mercury-color.side-btn-2:focus,
   .mercury-color.side-btn-3:focus {
     background-color: var(--skyblue);
+=======
+  .side-btn-2:focus,
+  .side-btn-3:focus {
+    background-color: var(--orange);
+>>>>>>> 0f13cb3135c6dd5f3629cac556ec518c0106b441
   }
 
   .side-btn-1::before {
@@ -807,33 +813,38 @@ p {
   .side-btn-1,
   .side-btn-2,
   .side-btn-3 {
-    /* background-color: orange; */
     width: 100%;
   }
 
-  .side-btn-1:hover,
+  /* ******************************************************** */
+  /* start button color change desktop */
+
+  /* change this to another class */
+  /* #hover-mercury:hover, */
   .side-btn-2:hover,
   .side-btn-3:hover {
     background-color: rgba(131, 131, 145, 0.4);
     border: black;
   }
 
-  /* .side-btn-1 {
-    background-color: var(--skyblue);
-  } */
-
-  .myBackGroundColor {
-    background-color: var(--skyblue);
-  }
-
+  /* need this? */
   .mySelectedBackGroundColor {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
+  /* button color when selected */
+  .myBackGroundColor {
+    background-color: var(--skyblue);
+  }
+
+  /* button color when focused */
   .side-btn-2:focus,
   .side-btn-3:focus {
     background-color: var(--skyblue);
   }
+
+  /* side btn color change stop */
+  /* ******************************************************** */
 
   /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
 
