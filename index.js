@@ -95,8 +95,9 @@ function clickHandler(event) {
   }
 }
 
-// ************* TABLE & DESKTOP **************
+// ************* BTN COLOR CHANGE TABLE & DESKTOP **************
 
+<<<<<<< HEAD
 function mercuryLoad() {
   console.log('mercury loaded');
   const sideBtn1Mercury = document.querySelector('.side-btn-1.mercury-color');
@@ -149,6 +150,40 @@ function mercuryLoad() {
     }
   });
 }
+=======
+const sideBtn1 = document.querySelector('.side-btn-1');
+const sideBtn2 = document.querySelector('.side-btn-2');
+const sideBtn3 = document.querySelector('.side-btn-3');
+
+//default
+sideBtn1.classList.add('myBackGroundColor');
+
+//disable hover - note : this disables js events on this element.  click events
+//will actually fall through to the next element (whatever that means).
+sideBtn1.style.pointerEvents = 'none';
+
+const clickedSide = false;
+
+sideBtn1.addEventListener('click', (clickedSide) => {
+  clickedSide = true;
+  if (clickedSide) {
+    sideBtn1.classList.add('myBackGroundColor');
+    sideBtn1.style.pointerEvents = 'none';
+    sideBtn2.classList.remove('myBackGroundColor');
+    sideBtn3.classList.remove('myBackGroundColor');
+  }
+});
+
+sideBtn2.addEventListener('click', (clickedSide) => {
+  clickedSide = true;
+  if (clickedSide) {
+    sideBtn1.classList.remove('myBackGroundColor');
+    sideBtn1.style.pointerEvents = 'initial';
+    sideBtn2.classList.add('myBackGroundColor');
+    sideBtn3.classList.remove('myBackGroundColor');
+  }
+});
+>>>>>>> 0f13cb3135c6dd5f3629cac556ec518c0106b441
 
 // VENUS COlOR FOR SIDE BTNS
 
